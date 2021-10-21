@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>CalculatorTriangle</title>
+    <script src="lib/angular.min.js">    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" type="text/javascript" 
+    language="javascript"></script>
+
+</head>
+<body ng-app="appCalc" ng-controller="calcCtrl">
+        <div class="formInputs">
+            <input type="text" class="formInputs__katet1" id="dataA"
+             maxlength="10" placeholder="Введите Катет" ng-model="katet" 
+             >
+            <input type="text" class="formInputs__gipotenusa" id="dataC" 
+            maxlength="10" placeholder="Введите Гипотенузу" 
+            ng-model="gipotenusa">
+        </div>
+        <div class="buttons">
+            <button class="buttons__resultKatet2Btn" type="submit" 
+            ng-click="findKatet()">
+                Найти второй катет
+            </button>
+            <button class="buttons__resultRadiusBtn" type="submit" 
+            ng-click="findRadius()">
+                Найти радиус вписанной окр-ти
+            </button>
+
+        </div>
+        <div class="formOutputs">
+            <input type="text" id="res" readonly placeholder="Результат" value="" ng-model="result">
+        </div>
+</body>
+</html>
